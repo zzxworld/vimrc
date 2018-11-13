@@ -35,72 +35,66 @@ xnoremap p pgvy
 
 " keyborad mapping
 map <c-l> :tabn<CR>                 " 切换标签页的快捷键
+map <c-j> :tabp<CR>                 " 切换标签页的快捷键
 map <c-w> <c-w>w                    " 切换窗口的快捷键
 
-filetype off                        " required
-set rtp+=~/.vim/bundle/Vundle.vim   " set runtime path
-call vundle#begin()                 " initialize
-
-" 使用 Vundle 管理自已
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " 文件管理
-Plugin 'scrooloose/nerdtree'
-
-" html 快速编辑
-Plugin 'mattn/emmet-vim'
-
-" 样式库
-Plugin 'chriskempson/base16-vim'
-
-" 配色
-Plugin 'flazz/vim-colorschemes'
-
-" 状态栏
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-" 函数列表
-Plugin 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
 
 " PHP
-Plugin 'StanAngeloff/php.vim'
-
-" Rails
-Plugin 'tpope/vim-rails'
+Plug 'StanAngeloff/php.vim'
 
 " Javascript 支持
-Plugin 'pangloss/vim-javascript'
-
-" Coffee script
-Plugin 'kchmck/vim-coffee-script'
+Plug 'pangloss/vim-javascript'
 
 " markdown 支持
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'zzxworld/vim-image_paste'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " 代码补全
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " 引号和括号补全
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
+
+" 文件搜索
+Plug 'kien/ctrlp.vim'
+
+" html 快速编辑
+Plug 'mattn/emmet-vim'
+
+" 样式库
+Plug 'chriskempson/base16-vim'
+
+" 配色
+Plug 'flazz/vim-colorschemes'
+
+" 状态栏
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " 空格和空行提示
-Plugin 'bronson/vim-trailing-whitespace'
+Plug 'bronson/vim-trailing-whitespace'
 
 " 注释代码
-Plugin 'tomtom/tcomment_vim'
-
-" Git Wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tomtom/tcomment_vim'
 
 " HTML5
-Plugin 'othree/html5.vim'
+Plug 'othree/html5.vim'
 
-call vundle#end()
-filetype plugin indent on
+" Blade Template
+Plug 'jwalton512/vim-blade'
+
+" 代码大纲
+Plug 'majutsushi/tagbar'
+
+" Vue
+Plug 'posva/vim-vue'
+
+call plug#end()
 
 " Airline
 let g:airline_powerline_fonts = 1
